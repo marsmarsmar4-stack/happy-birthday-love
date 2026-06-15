@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday, My Love</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Poppins:wght@300;400;500&display=swap');
+
+        :root {
+            --primary-color: #fce4ec; /* Soft Pink */
+            --text-dark: #333;
+            --text-light: #666;
+            --accent: #d81b60;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+            background-color: #fafafa;
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Playfair Display', serif;
+            font-weight: normal;
+        }
+
+        /* Hero Section with Hearts */
+        .hero {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background-color: var(--primary-color);
+            padding: 20px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero h1, .hero p {
+            z-index: 2;
+            position: relative;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 10px;
+            color: var(--text-dark);
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: var(--text-light);
+            max-width: 600px;
+        }
+
+        /* Hearts Animation */
+        .heart {
+            position: absolute;
+            bottom: -50px;
+            font-size: 1.5rem;
+            color: rgba(216, 27, 96, 0.4);
+            animation: floatUp 5s infinite ease-in;
+            z-index: 1;
+            pointer-events: none;
+        }
+
+        @keyframes floatUp {
+            0% {
+                transform: translateY(0) scale(1) rotate(0deg);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(-110vh) scale(1.5) rotate(360deg);
+                opacity: 0;
+            }
+        }
+
+        /* Animating individual hearts with different delays and positions */
+        .heart:nth-child(1) { left: 10%; animation-duration: 6s; animation-delay: 0s; font-size: 1.2rem; }
+        .heart:nth-child(2) { left: 25%; animation-duration: 7s; animation-delay: 2s; font-size: 2rem; }
+        .heart:nth-child(3) { left: 40%; animation-duration: 5s; animation-delay: 1s; font-size: 1.5rem; }
+        .heart:nth-child(4) { left: 55%; animation-duration: 8s; animation-delay: 3s; font-size: 1.8rem; }
+        .heart:nth-child(5) { left: 70%; animation-duration: 6s; animation-delay: 0.5s; font-size: 1.4rem; }
+        .heart:nth-child(6) { left: 85%; animation-duration: 7s; animation-delay: 2.5s; font-size: 2.2rem; }
+
+        /* Timeline Sections */
+        .section {
+            padding: 80px 20px;
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            color: var(--accent);
+            margin-bottom: 20px;
+        }
+
+        .memory-card {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            margin-top: 30px;
+            transition: transform 0.3s ease;
+        }
+
+        .memory-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .memory-photo {
+            width: 100%;
+            max-width: 600px;
+            height: auto;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            object-fit: cover;
+        }
+
+        .memory-text {
+            font-size: 1.1rem;
+            color: var(--text-light);
+        }
+
+        .first-message-text {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            color: var(--accent);
+            font-style: italic;
+            margin: 20px 0;
+        }
+
+        /* Gallery Grid */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 40px;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        .gallery-item img:hover {
+            transform: scale(1.05);
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--primary-color);
+            text-align: center;
+            padding: 40px 20px;
+            margin-top: 50px;
+        }
+
+        footer h2 {
+            font-size: 2rem;
+            margin-bottom: 10px;
+            color: var(--accent);
+        }
+        
+        footer p {
+            font-size: 1.2rem;
+            color: var(--text-dark);
+            font-style: italic;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.5rem; }
+            .section-title { font-size: 2rem; }
+            .first-message-text { font-size: 1.5rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="hero">
+        <div class="heart">❤️</div>
+        <div class="heart">❤️</div>
+        <div class="heart">❤️</div>
+        <div class="heart">❤️</div>
+        <div class="heart">❤️</div>
+        <div class="heart">❤️</div>
+
+        <h1>Happy Birthday, My Love</h1>
+        <p>A little journey through our favorite moments together. Thank you for making every day special.</p>
+    </header>
+
+    <section class="section">
+        <h2 class="section-title">Our First Message</h2>
+        <div class="memory-card">
+            <p class="first-message-text">"I can't live without you - you are everything to me."</p>
+            <p class="memory-text">It all started right here. I didn't know it then, but this was the beginning of the best chapter of my life.</p>
+        </div>
+    </section>
+
+    <section class="section" style="background-color: #fff;">
+        <h2 class="section-title">The Moment We Started Dating</h2>
+        <div class="memory-card">
+            <img src="1.jpg" alt="Started Dating" class="memory-photo">
+            <p class="memory-text">The day it became official. Everything just clicked into place, and I knew I wanted you by my side for a very long time.</p>
+        </div>
+    </section>
+
+    <section class="section">
+        <h2 class="section-title">Our Most Memorable Kiss</h2>
+        <div class="memory-card">
+            <img src="4.jpg" alt="Our Most Memorable Kiss" class="memory-photo">
+            <p class="memory-text">A moment where time stood still, and everything else faded away. I will remember this feeling forever.</p>
+        </div>
+    </section>
+
+    <section class="section" style="background-color: #fff;">
+        <h2 class="section-title">Our First Trip</h2>
+        <div class="memory-card">
+            <img src="7.jpg" alt="First Trip" class="memory-photo">
+            <p class="memory-text">Exploring the world with you is my favorite adventure. This trip was just the first of many beautiful memories we will build together.</p>
+        </div>
+    </section>
+
+    <section class="section">
+        <h2 class="section-title">And Every Little Moment in Between...</h2>
+        <p>Just a few of the million reasons why I love you.</p>
+        
+        <div class="gallery-grid">
+            <div class="gallery-item">
+                <img src="2.jpg" alt="Memory">
+            </div>
+            <div class="gallery-item">
+                <img src="3.jpg" alt="Memory">
+            </div>
+            <div class="gallery-item">
+                <img src="5.jpg" alt="Memory">
+            </div>
+            <div class="gallery-item">
+                <img src="9.jpg" alt="Memory">
+            </div>
+            <div class="gallery-item">
+                <img src="7.jpg" alt="Memory">
+            </div>
+            <div class="gallery-item">
+                <img src="8.jpg" alt="Memory">
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <h2>I love you endlessly, Baby</h2>
+        <p>from mars ❤️</p>
+    </footer>
+
+</body>
+</html>
